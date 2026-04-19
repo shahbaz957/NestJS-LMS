@@ -9,7 +9,8 @@ export class AuthController {
   register(@Body() registerUserDto:RegisterDto) { 
     // this (DTO) is used for getting the payload in request
     // logic for registering the user but we dont write logic in controller we do this work mostly in service file
-    return this.authService.registerUser();
+    const result = this.authService.registerUser(registerUserDto);
+    return result ; 
     // return { message: 'User registered Successfully' };
   }
   @Get('message')
