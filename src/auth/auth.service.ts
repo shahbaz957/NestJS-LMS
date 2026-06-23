@@ -17,6 +17,5 @@ export class AuthService {
     *send Token to the user
     */
    return this.userService.createUser();
-    
   }
 }
